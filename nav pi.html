@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site para receitas de culunária.">
+    <meta name="author" content="Bianca Gabriela Golfe">
+    <meta name="keywords" content="sabor,receita,modo de preparo">
+    <title>Tech Línguas</title>
+    <link rel="stylesheet" href="nav pi.css">
+    <link rel="icon" href="imagens/logo  topo.png" type="image/x-icon">
+</head>
+<body>
+
+
+
+<div class="container">
+    <!-- Imagem à esquerda com uma classe específica -->
+    <img src="imagens/tech linguas.jpeg" class="left-img" alt="Imagem Esquerda">
+        
+    <!-- Texto centralizado -->
+    <p class="text-between">O PAPEL DA TECNOLOGIA NO ENSINO DA
+        GRAMÁTICA E OUTROS IDIOMAS</p>
+        
+    <!-- Imagem à direita com uma classe específica -->
+    <img src="imagens/lingua-Photoroom.png" class="right-img" alt="Imagem Direita">
+</div>
+
+    </div>
+    <nav class="fixed-menu">
+        <ul>
+            <li><a href="#ias">Inteligências Artificiais</a></li>
+            <li><a href="#distancia">Ensino à distância</a></li>
+            <li><a href="#linguagens">Ensino das Linguagens</a></li>
+            <li><a href="#verificador">Verificador de texto</a></li>
+            <li><a href="#plataformas">Plataformas</a></li>
+        </ul>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="imagens/imagem2.jpeg" alt="Imagem 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/imagem1.jpeg" alt="Imagem 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/" alt="Imagem 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/" alt="Imagem 4">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/" alt="Imagem 4">
+            </div>
+        </div>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        const indicators = document.querySelectorAll('.carousel-indicators div');
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel').style.transform = `translateX(${offset}%)`; }
+            
+        function moveSlide(direction) {
+            currentIndex += direction;
+
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+
+            updateCarousel();
+        }
+
+        function moveToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+       
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000); 
+    </script>
+    </div>
+</body>
+</html>
